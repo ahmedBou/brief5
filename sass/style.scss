@@ -83,7 +83,7 @@ body {
 .nav-icon {
   font-size: 1.5rem;
   color: $icon-color;
-  text-decoration: none !important;
+  text-decoration: none;
   transition-property: color;
   transition-duration: 2s;
   transition-timing-function: linear;
@@ -103,6 +103,7 @@ body {
   animation-duration: 20s;
   animation-delay: 5s;
   animation-iteration-count: infinite;
+  overflow-x: hidden;
 }
 @keyframes zoom {
   0% {
@@ -116,6 +117,7 @@ body {
     width: 60%;
   }
 }
+
 .text-header {
   position: relative;
   text-align: right;
@@ -232,21 +234,21 @@ p {
 }
 
 // preloader
-.preloader {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: $whitesmoke;
-  z-index: 99;
-}
-.hidePreloader {
-  display: none !important;
-}
+// .preloader {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   position: fixed;
+//   top: 0;
+//   bottom: 0;
+//   left: 0;
+//   right: 0;
+//   background: $whitesmoke;
+//   z-index: 99;
+// }
+// .hidePreloader {
+//   display: none !important;
+// }
 
 // inventory section
 .inventory {
@@ -377,4 +379,80 @@ p {
     flex-direction: column;
     justify-content: center;
   }
+}
+// Reservation
+.reservation {
+  background: #d8d6d6;
+  display: flex;
+  justify-content: center;
+}
+#R {
+  width: 50%;
+}
+.D1 {
+  background: whitesmoke;
+
+  padding: 4rem;
+}
+.D1 h1 {
+  font-size: 1em;
+  padding: 1rem;
+}
+.carFot img {
+  width: 60%;
+  align-items: right;
+}
+// sign up
+
+.hide {
+  display: none;
+}
+.error {
+  color: red;
+  font-size: 0.6em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+}
+input {
+  border-color: #ddd;
+  width: 400px;
+  display: block;
+  font-size: 1.5em;
+}
+.carSelect img {
+  width: 50px;
+  // align-items: right;
+}
+.popup {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.popup-content {
+  width: 500px;
+  height: 300px;
+  background: blanchedalmond;
+  position: relative;
+}
+.close {
+  position: absolute;
+  top: 0;
+  right: 14px;
+  font-size: 2rem;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+.carSelect{
+  display: flex;
+  justify-content: space-evenly;
+}
+.carSelect img {
+  width: 60%;
+  // align-items: right;
 }

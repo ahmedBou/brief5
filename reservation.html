@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="sass/style.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- reservation section  -->
+    <section class="reservation">
+      <div id="R" class="Resr">
+        <div class="D1">
+          <h1>RÉSERVER UN VÉHICULE!</h1>
+
+          <select
+            name="cars"
+            id="liste"
+            class="cars"
+            onchange="getSelectValue()"
+          >
+            <option>Choisir une voiture</option>
+            <option value="BMW">BMW</option>
+            <option value="HYUNDAI">HYUNDAI</option>
+            <option value="REANUALT">REANUALT</option>
+          </select>
+          <div class="D">
+            <div class="De">
+              <div class="depart">
+                <!-- <img src="images/agenda.png" /><strong>Date Debut</strong> -->
+              </div>
+              <input
+                class="date"
+                onchange="getdate2()"
+                id="datetime"
+                type="date"
+                name="bday"
+              />
+            </div>
+            <div class="De">
+              <div class="depart">
+                <!-- <img src="images/maps.png" /> <strong>DUREE</strong> -->
+              </div>
+              <input class="text" type="number" id="inpt" name="bday" />
+            </div>
+          </div>
+          <button id="btnres" onclick="carSelect()">Réserver maintenant</button>
+        </div>
+      </div>
+      <div class="carFot">
+        <img src="images/car-german-1.jpeg" alt="" />
+      </div>
+      
+    </section>
+      <div class="popup hide">
+        <div class="popup-content">
+          <div class="carSelect"></div>
+          <div class="close">+</div>
+        </div>
+      </div>
+    <script src="js/app2.js"></script>
+  </body>
+</html>
