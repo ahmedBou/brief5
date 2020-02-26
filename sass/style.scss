@@ -96,14 +96,18 @@ body {
   color: whitesmoke;
 }
 .max-height {
-  min-height: calc(100vh - 76px);
+  height: 100%;
   background: url("../images/headerBcg.jpeg") center center/cover no-repeat;
   background-attachment: fixed;
   animation-name: zoom;
   animation-duration: 20s;
   animation-delay: 5s;
   animation-iteration-count: infinite;
+<<<<<<< HEAD
   overflow-x: hidden;
+=======
+  overflow-x: auto;
+>>>>>>> ff7804d568c8b2020e0704f47c65cace158e66c0
 }
 @keyframes zoom {
   0% {
