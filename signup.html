@@ -8,17 +8,72 @@
  
   </head>
   <body>
-    <form name="myform">
-      Email:<input type="text" name="email" />
-      <span class="error hide"></span></br>
-      Password : <input type="text" name="password"  id="pass"/>
-      <span class="error hide"></span></br>
-      Confirm Password : <input type="text" name="confirm password" id="cpass" />
-      <span class="error hide"></span></br>
-      User Name : <input type="text" name="userName" />
-      <span class="error hide"></span><br />
-      <input type="submit" value="Sign Up" />
-    </form>
-    <script src="js/app.js"></script>
+
+    <nav class="navbar " id="navBar">
+      <div class="navbar_header">
+        <img src="images/gearLogo.png" class="navbar_logo" alt="logo" />
+        <ul class="navbar_big">
+          <li>
+            <a href="index.html" class="navbar_single_link">home </a>
+          </li>
+          <li>
+            <a href="reservation.html" class="navbar_single_link">reservation</a>
+          </li>
+    
+          <li>
+            <a href="signup.html" class="navbar_single_link">s'enregistrer</a>
+          </li>
+        </ul>
+        <!-- social icons -->
+        <div class="nav-icons">
+          <a href="#" class="nav-icon">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="#" class="nav-icon">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" class="nav-icon">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+        <div class="navbar_btn">
+          <div class="bar bar1"></div>
+          <div class="bar bar2"></div>
+          <div class="bar bar3"></div>
+        </div>
+      </div>
+      <ul class="navbar_links">
+        <li>
+          <a href="index.html" class="navbar_single_link">home </a>
+        </li>
+        <li>
+          <a href="reservation.html" class="navbar_single_link">reservation</a>
+        </li>
+        <li>
+          <a href="signup.html" class="navbar_single_link">s'enregistrer</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- end of navbar -->
+    
+    <!-- Sign Up -->
+    <div class="form">
+      <label for="name">Name: <span class="error "> enter valid name</span></label>
+      <input onkeyup ="validForm(0)" type="text" id="name">
+
+      <label for="email">Email<span class="error">enter valid email</span></label>
+      <input onkeyup="validForm(1)" type="text" id="email"> 
+
+      <label for="password">Password <span class="error">enter valid password</span></label>
+      <input onkeyup="validForm(2)" type="password" id="password">
+
+      <label for="cpassword">Confirm Password<span class="error">enter valid password</span></label>
+      <input onkeyup="validForm(3)" type="password" id="cpassword">
+        
+      <button onclick="reservation()">click Me!</button>
+    </div>
+    <script src="js/signup.js"></script>
+    <script src="js/nav.js"></script>
+
   </body>
 </html>

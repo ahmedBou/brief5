@@ -1,64 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="sass/style.css" />
 
-    <title>Document</title>
-  </head>
-  <body>
-    <!-- reservation section  -->
-    <section class="reservation">
-      <div id="R" class="Resr">
-        <div class="D1">
-          <h1>RÉSERVER UN VÉHICULE!</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="sass/style.css" />
 
-          <select
-            name="cars"
-            id="liste"
-            class="cars"
-            onchange="getSelectValue()"
-          >
-            <option>Choisir une voiture</option>
-            <option value="BMW">BMW</option>
-            <option value="HYUNDAI">HYUNDAI</option>
-            <option value="REANUALT">REANUALT</option>
-          </select>
-          <div class="D">
-            <div class="De">
-              <div class="depart">
-                <!-- <img src="images/agenda.png" /><strong>Date Debut</strong> -->
-              </div>
-              <input
-                class="date"
-                onchange="getdate2()"
-                id="datetime"
-                type="date"
-                name="bday"
-              />
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- nav element -->
+  <nav class="navbar " id="navBar">
+    <div class="navbar_header">
+      <img src="images/gearLogo.png" class="navbar_logo" alt="logo" />
+      <ul class="navbar_big">
+        <li>
+          <a href="index.html" class="navbar_single_link">home </a>
+        </li>
+        <li>
+          <a href="reservation.html" class="navbar_single_link">reservation</a>
+        </li>
+
+        <li>
+          <a href="signup.html" class="navbar_single_link">s'enregistrer</a>
+        </li>
+      </ul>
+      <!-- social icons -->
+      <div class="nav-icons">
+        <a href="#" class="nav-icon">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="#" class="nav-icon">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="nav-icon">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+      <div class="navbar_btn">
+        <div class="bar bar1"></div>
+        <div class="bar bar2"></div>
+        <div class="bar bar3"></div>
+      </div>
+    </div>
+    <ul class="navbar_links">
+      <li>
+        <a href="index.html" class="navbar_single_link">home </a>
+      </li>
+      <li>
+        <a href="reservation.html" class="navbar_single_link">reservation</a>
+      </li>
+      <li>
+        <a href="signup.html" class="navbar_single_link">s'enregistrer</a>
+      </li>
+    </ul>
+  </nav>
+  <!-- end of navbar -->
+
+  <!-- reservation section  -->
+  <section class="reservation">
+    <div id="R" class="Resr">
+      <div class="D1">
+        <h1>RÉSERVER UN VÉHICULE!</h1>
+
+        <select name="cars" id="liste" class="cars" onchange="getSelectValue()">
+          <option>Choisir une voiture</option>
+          <option value="BMW">BMW</option>
+          <option value="HYUNDAI">HYUNDAI</option>
+          <option value="REANUALT">REANUALT</option>
+        </select>
+        <div class="D">
+          <div class="De">
+            <div class="depart">
+              <!-- <img src="images/agenda.png" /><strong>Date Debut</strong> -->
             </div>
-            <div class="De">
-              <div class="depart">
-                <!-- <img src="images/maps.png" /> <strong>DUREE</strong> -->
-              </div>
-              <input class="text" type="number" id="inpt" name="bday" />
-            </div>
+            <input class="date" onchange="getdate2()" id="datetime" type="date" name="bday" />
           </div>
-          <button id="btnres" onclick="carSelect()">Réserver maintenant</button>
+          <div class="De">
+            <input class="text" type="number" id="inpt" name="bday" />
+          </div>
         </div>
+        <button id="btnres" onclick="carSelect()">Réserver maintenant</button>
       </div>
-      <div class="carFot">
-        <img src="images/car-german-1.jpeg" alt="" />
+    </div>
+    <div class="carFot">
+      <img src="images/car-german-1.jpeg" alt="" />
+    </div>
+
+  </section>
+  <div class="popup hide">
+    <div class="popup-content">
+      <div class="carSelect">
+        <span>
+          <p id="voiture">Voitures:</p>
+        </span>
+        <p id="duree">
+          Durees:
+        </p>
       </div>
-      
-    </section>
-      <div class="popup hide">
-        <div class="popup-content">
-          <div class="carSelect"></div>
-          <div class="close">+</div>
-        </div>
-      </div>
-    <script src="js/app2.js"></script>
-  </body>
+      <div class="close">+</div>
+    </div>
+  </div>
+  <script src="js/reservation.js"></script>
+  <script src="js/nav.js"></script>
+
+</body>
+
 </html>
